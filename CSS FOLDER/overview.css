@@ -1,0 +1,140 @@
+/* Reset default styles and set up the layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navigation bar styling */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav.navbar-nav li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav.navbar-nav li a img {
+    height: 20px;
+    margin-right: 8px;
+}
+
+.nav.navbar-nav li a:hover, .nav.navbar-nav li.active a {
+    background-color: #e9f0f8;
+    color: #007bff;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-image {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.profile-title {
+    font-size: 12px;
+    color: #666;
+}
+
+.profile-actions img {
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Main content styling */
+.container {
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img src="Pictures/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-center">
+                    <li class="active"><a href="#">
+                      <img src="Pictures/OVERVIEW11.png" alt="">Overview</a></li>
+                    <li><a href="#">
+                      <img src="Pictures/patients.png" alt="">Patients</a></li>
+                    <li><a href="#">
+                      <img src="Pictures/schedule.png" alt="">Schedule</a></li>
+
+                    <li><a href="#">
+                      <img src="Pictures/Message.png" alt="">Messages</a></li>
+                    <li><a href="#">
+                      <img src="Pictures/Transactions.png" alt="">Transactions</a></li>
+                </ul>
+            </div>
+            
+            <div class="profile-card navbar-right">
+              <img src="Pictures/doctor.png" alt="Dr. Jose Simmons" class="profile-image">
+              <div class="profile-info">
+                <div class="profile-name">Dr. Jose Simmons</div>
+                <div class="profile-title">General Practitioner</div>
+              </div>
+              <div class="profile-actions">
+                <img src="Pictures/settings.png" alt="Settings">
+                <img src="Pictures/threedots.png" alt="More">
+            </div>
+            </div>
+        </div>
+    </nav>
+
+
+     <div class="container">
+        <aside class="sidebar">
+            <h2>Patients</h2>
+            <input type="text" id="new-patient-name" placeholder="Enter patient name..." class="input-field">
+            <button id="add-patient-btn">Add Patient</button>
+            <ul class="patients-list" id="patients-list">
+                <!-- Patients will be added here -->
+            </ul>
+        </aside>
+
+        <main class="dashboard">
+            <header>
+                <h1>Select a Patient</h1>
+                <p>Details will appear here...</p>
+            </header>
+            
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Blood Pressure</h3>
+                    <p id="bp">-- / --</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Respiratory Rate</h3>
+                    <p id="respiratory">-- bpm</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Temperature</h3>
+                    <p id="temperature">--°F</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Heart Rate</h3>
+                    <p id="heart-rate">-- bpm</p>
+                </div>
+            </section>
+        </main>
+    </div>

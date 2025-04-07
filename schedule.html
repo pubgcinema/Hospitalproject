@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - TechCare</title>
+    <link rel="stylesheet" href="CSS FOLDER/schedule.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img src="Pictures/logo.png" alt="TechCare Logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-center" id="nav-links">
+                    <li><a href="overview.html" data-page="overview">
+                        <img src="Pictures/OVERVIEW11.png" alt="">Overview</a>
+                    </li>
+                    <li><a href="patients.html" data-page="patients">
+                        <img src="Pictures/patients.png" alt="">Patients</a>
+                    </li>
+                    <li class="active"><a href="schedule.html" data-page="schedule">
+                        <img src="Pictures/schedule.png" alt="">Schedule</a>
+                    </li>
+                    <li><a href="./HTML FOLDER/Messages.html" data-page="messages">
+                        <img src="Pictures/Message.png" alt="">Messages</a>
+                    </li>
+                    <li><a href="HTML FOLDER/Files.html" data-page="files">
+                        <img src="./Pictures/Files.png" alt="">Files</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile-card navbar-right">
+                <img src="Pictures/doctor.png" alt="User Profile" class="profile-image">
+                <div class="profile-info">
+                    <div class="profile-name" id="userName">Dr. Jose Simmons</div>
+                    <div class="profile-title" id="userProfession">General Practitioner</div>
+                </div>
+                <div class="profile-actions">
+                    <img src="Pictures/settings.png" alt="Settings">
+                    <img src="Pictures/threedots.png" alt="More">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main class="schedule-dashboard">
+            <header>
+                <h1>Schedule</h1>
+                <div class="date-nav">
+                    <span id="current-date">March 06, 2025</span>
+                </div>
+            </header>
+
+            <!-- Appointment Form -->
+            <section class="appointment-form" id="appointment-form" style="display: none;">
+                <h2>Add New Appointment</h2>
+                <form id="new-appointment-form">
+                    <div class="form-group">
+                        <label for="appointment-date">Date:</label>
+                        <input type="date" id="appointment-date" name="appointment-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-time">Time:</label>
+                        <input type="time" id="appointment-time" name="appointment-time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-day">Day:</label>
+                        <select id="appointment-day" name="appointment-day" required>
+                            <option value="">Select Day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="previous-visit">Previous Visit?</label>
+                        <input type="checkbox" id="previous-visit" name="previous-visit">
+                    </div>
+                    <div class="form-group" id="purpose-group" style="display: none;">
+                        <label for="purpose">Purpose of Visit:</label>
+                        <select id="purpose" name="purpose">
+                            <option value="">Select Purpose</option>
+                            <option value="General Checkup">General Checkup</option>
+                            <option value="Blood Pressure Monitoring">Blood Pressure Monitoring</option>
+                            <option value="Follow-Up">Follow-Up</option>
+                            <option value="Vaccination">Vaccination</option>
+                            <option value="Lab Results Review">Lab Results Review</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="add-appointment-btn">Add Appointment</button>
+                </form>
+                <button id="toggle-form-btn">Hide Form</button>
+            </section>
+
+            <!-- Appointments List -->
+            <section class="appointments" id="appointments-list">
+                <button id="show-form-btn">+ Add Appointment</button>
+                <div class="appointment-card">
+                    <div class="time">09:00 AM</div>
+                    <div class="details">
+                        <h3>Emily Williams</h3>
+                        <p>General Checkup</p>
+                        <span class="status confirmed">Confirmed</span>
+                    </div>
+                </div>
+                <div class="appointment-card">
+                    <div class="time">10:30 AM</div>
+                    <div class="details">
+                        <h3>Ryan Johnson</h3>
+                        <p>Blood Pressure Monitoring</p>
+                        <span class="status pending">Pending</span>
+                    </div>
+                </div>
+                <div class="appointment-card">
+                    <div class="time">02:00 PM</div>
+                    <div class="details">
+                        <h3>Jessica Taylor</h3>
+                        <p>Follow-Up</p>
+                        <span class="status confirmed">Confirmed</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="schedule.js"></script>
+</body>
+</html>

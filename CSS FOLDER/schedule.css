@@ -1,0 +1,297 @@
+/* schedule.css */
+
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e6f0fa; /* Light blue background */
+}
+
+/* Navbar styling (consistent with patients.html) */
+.navbar {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar-header img {
+    max-width: 50px;
+    height: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar-nav li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-nav li.active a {
+    color: #00c4cc;
+    font-weight: bold;
+}
+
+.navbar-nav li a img {
+    width: 20px;
+    height: 20px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.profile-title {
+    font-size: 14px;
+    color: #666;
+}
+
+.profile-actions img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.navbar-right {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* Schedule dashboard styling */
+.schedule-dashboard {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.date-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.date-nav button {
+    background: none;
+    border: none;
+    color: #00c4cc;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#current-date {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Appointments section */
+.appointments {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.appointment-card {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.time {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 100px;
+}
+
+.details {
+    flex: 1;
+}
+
+.details h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.status {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.status.confirmed {
+    background-color: #00c4cc;
+}
+
+.status.pending {
+    background-color: #ffaa00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .schedule-dashboard {
+        padding: 20px;
+    }
+
+    .appointment-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .time {
+        width: auto;
+    }
+
+    .date-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+#purpose-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+
+
+.appointment-form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.appointment-card {
+    display: flex;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.time {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.status.confirmed {
+    background-color: #28a745;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+.status.pending {
+    background-color: #ffc107;
+    color: black;
+    padding: 2px 8px;
+    border-radius: 3px;
+}

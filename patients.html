@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard</title>
+    <link rel="stylesheet" href="CSS FOLDER/patients.css">
+    <link rel="stylesheet" href="CSS FOLDER/dashboard.css">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img src="Pictures/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-center">
+                    <li class="active"><a href="overview.html">
+                      <img src="Pictures/OVERVIEW11.png" alt="">Overview</a></li>
+                    <li><a href="patients.html">
+                      <img src="Pictures/patients.png" alt="">Patients</a></li>
+                    <li><a href="schedule.html">
+                      <img src="Pictures/schedule.png" alt="">Schedule</a></li>
+                    <li><a href="./HTML FOLDER/Messages.html">
+                      <img src="Pictures/Message.png" alt="">Messages</a></li>
+                    <li><a href="HTML FOLDER/Files.html">
+                      <img src="../Pictures/Files.png" alt=""> Files</a></li>
+                </ul>
+            </div>
+            <div class="profile-card navbar-right">
+              <img src="Pictures/doctor.png" alt="User Profile" class="profile-image">
+              <div class="profile-info">
+                <div class="profile-name" id="userName">Dr. Jose Simmons</div>
+                <div class="profile-title" id="userProfession">General Practitioner</div>
+              </div>
+              <div class="profile-actions">
+                <img src="Pictures/settings.png" alt="Settings">
+                <img src="Pictures/threedots.png" alt="More">
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Patients</h2>
+            <button id="toggle-form-btn">+</button>
+
+            <div id="patient-form" style="display: none;">
+                <input type="text" id="first-name" placeholder="First Name" class="input-field">
+                <input type="text" id="last-name" placeholder="Last Name" class="input-field">
+                <input type="number" id="age" placeholder="Age" class="input-field">
+                <input type="text" id="gender" placeholder="Gender" class="input-field">
+                <input type="number" id="respiratory-rate" placeholder="Respiratory Rate (bpm)" class="input-field">
+                <input type="number" id="temperature" placeholder="Temperature (°F)" class="input-field">
+                <input type="number" id="heart-rate" placeholder="Heart Rate (bpm)" class="input-field">
+                <input type="text" id="diagnosis" placeholder="Diagnosis" class="input-field">
+                <button id="add-patient-btn">Add Patient</button>
+            </div>
+
+            <ul class="patients-list" id="patients-list">
+                <!-- Patients will be dynamically added here -->
+            </ul>
+        </aside>
+
+        <main class="dashboard">
+            <section class="diagnosis-history">
+                <h2>Diagnosis History</h2>
+                <div class="chart-container">
+                    <canvas id="bloodPressureChart"></canvas>
+                </div>
+                <div class="vital-stats">
+                    <div class="stat-card">
+                        <h3>Respiratory Rate</h3>
+                        <p id="display-respiratory-history">-- bpm</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Temperature</h3>
+                        <p id="display-temperature-history">--°F</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Heart Rate</h3>
+                        <p id="display-heart-rate-history">-- bpm</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="patient-details">
+            <div class="profile-card">
+                <img src="Pictures/doctor.png" alt="Patient Profile" class="profile-image">
+                <div class="profile-info">
+                    <h2 id="display-name">Select a Patient</h2>
+                    <p id="display-dob">Date of Birth: --</p>
+                    <p id="display-gender">Gender: --</p>
+                    <p id="display-contact">Contact: --</p>
+                    <p id="display-emergency">Emergency Contact: --</p>
+                    <p id="display-insurance">Insurance Provider: --</p>
+                </div>
+                <button id="show-all-btn">Show All Information</button>
+            </div>
+            <div class="lab-results">
+                <h3>Lab Results</h3>
+                <p id="lab-results">--</p>
+            </div>
+            <div class="diagnostic-list">
+                <h3>Diagnostic List</h3>
+                <ul id="diagnosis-list">
+                    <!-- Diagnoses will be dynamically added here -->
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="patients.js"></script>
+</body>
+</html>
